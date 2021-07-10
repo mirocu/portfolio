@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-        <title>Ayako's portfolio</title>
+        <title>Ayako's portfolio(JavaScript)</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/works.css">
         <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
@@ -27,54 +27,121 @@
                             
                         </ul>
                     </nav>
-                    <div class="headr-pankuzu">
-                        <a href="index.html">HOME</a> > <a href="index.html#works">WORKS</a> > WORKS_1
-                    </div>
+                </div>
+                <div class="headr-pankuzu">
+                    <a href="index.html">HOME</a> > <a href="index.html#works">WORKS</a> > JavaScript
                 </div>
             </header>
 
         <!-- main -->
-            <main  class="content">
+            <main  class="main">
+                <p class="main-title">JavaScript</p>
 
-            <!-- main-visual -->
-            <div class="main-visual">
-                <div class="main-visual-inner">
-                    <p class="main-title">練習１　計算</p>
-                    <p class="subtitle">JavaScript</p>
+<!-- ========================================================================= -->                
+                <!-- S-1-->
+                <section class="S1 section" id="S1">
+                    <div class="inner">
+                        <div class="title">練習１　計算</div>
+                            <p class="main-text">
+                                    <span>
+                                        数値１　と　数値２　を足します。　<br>数値を入力後、計算を押してください。
+                                    </span>
+                                    <br><br>
+                                        <input type="number" id="id1" placeholder="数値１"/>
+                                        <br><br><h1>+</h1>
+                                        <input type="number" id="id2" placeholder="数値２"/>
 
-                    <p class="main-text">
-                        <section>
-                            <p>
-                                数値１　と　数値２　を足します。　<br>数値を入力後、計算を押してください。
+                                        <p class="button">
+                                            <button id="cal" onclick="cal()">計算</button>
+                                            <button id="clear" onclick="clear_1()">リセット</button>
+                                        </p>
+                                        <h2><input type="text" id="id3" placeholder="答え" disabled/></h2>   
                             </p>
-                            <br><br>
+                    </div>
+                </section>
+                <!-- /S-1-->
 
-                                <input type="text" id="id1" placeholder="数値１">
+                <!-- S-2-->
+                <section class="S2 section" id="S1">
+                    <div class="inner">
+                        <p class="title">練習２　数当てゲーム　</p>
+                            <p class="main-text">
+                                    <p>1～10まで <br class="sp-only">PCの出した「？」の数を当ててください。</p>
+                                    <br>
 
-                                <h2>+</h2>
-                                <input type="text" id="id2" placeholder="数値２">
-                                
-                                <p class="ans">
-                                    <h2>答え  ><span id="id3"></span></h2>
-                                </p>  
-
-                            <p class="button">
-                                <button id="cal" onclick="cal()">計算</button>
-                                <button id="clear" onclick="clear_1()">リセット</button>
+                                    <div>
+                                        <button id="sai" onclick="sai()">開始</button>
+                                    </div>
+                                    
+                                    <div>
+                                        <table class="dentaku">
+                                            <!--液晶画面-->
+                                            <tr>
+                                                <td class="hatena">PC</td>
+                                                <td id="tmp"></td>
+                                                <td class="ans">自分</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text" id ="hatena" class="box" value="?" disabled/></td>
+                                                <td>=</td>
+                                                <td><input type="text" class="display" id="display" value=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="7" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="8" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="9" onclick="get_calc(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="4" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="5" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="6" onclick="get_calc(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="1" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="2" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="3" onclick="get_calc(this)"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="button" value="0" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="H" id="H" class="hint" onclick="get_calc(this)"></td>
+                                                <td><input type="button" value="E" id="E" onclick="get_calc(this)"></td>
+                                            </tr>
+                                        </table>
+                                        <div class="balloonoya" onclick="showBalloon()">クリックしてください
+                                            <span class="balloon1" id="makeImg">
+                                                H　は　ヒントボタンです。<br>
+                                                E　は　挑戦ボタンです。
+                                            </span>
+                                          </div>
+                                    </div>
                             </p>
-                            
-                        </section>
-                    </p>
-                    <br>
+                    </div>
+                </section>
+             
+                <!-- /S-2-->
 
+               <!-- S-3-->
+               <section class="S1 section" id="S1">
+                <div class="inner">
+                    <p class="title">練習３　タイピングゲーム　</p>
+                        <p class="main-text">
+                                <span>
+                                    タイピング練習です。
+                                </span>
+
+                        </p>
                 </div>
-            </div>
-            <!-- /main-visual -->
+                </section>
+                <!-- /S-3-->
 
 
-                
-                    
-                
+
+
+
+
+
+
+
 
                 <!-- page top-->
                 <div id="page_top"><a></a> </div>
