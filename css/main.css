@@ -3,8 +3,8 @@ body {
     font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
     font-size: 14px;
     line-height: 1.8;
-    letter-spacing: .8px;
-    color: #333;
+    letter-spacing: .8px;/*行間*/
+    color:cadetblue;
   }
 
 a {
@@ -13,7 +13,7 @@ a {
   }
 
   img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     vertical-align: bottom;
     border-style: none;
@@ -194,7 +194,7 @@ main{
 .profile {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    /*max-width: 80%;*/
     margin: 0 auto;
   }
 
@@ -241,6 +241,7 @@ main{
 
 .works-img img {
   border: 1px solid #e6e6e6;
+  height: 150px;
 }
 
 .works-name {
@@ -267,7 +268,7 @@ main{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  width: 48%;
+  width: 30%;
   margin-bottom: 50px;
 }
 
@@ -294,6 +295,15 @@ main{
 
 .contact-item:not(:last-child) {
   margin-right: 10px;
+}
+
+.contact-img::before{
+    /* アイコン*/
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0e0';
+    font-size: 25px;
+    color: rgb(60, 80, 68);
 }
 
 .contact-text {
@@ -324,8 +334,10 @@ main{
   transform: translateX(-50%);
   margin: 0 auto;
 }
+
+ /* アイコン*/
 #page_top a::before{
-  /* アイコン*/
+ 
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   content: '\f102';
@@ -341,6 +353,8 @@ main{
   margin: auto;
   text-align: center;
 }
+ /* アイコン*/
+ 
 #page_top a::after{
   content: 'PAGE TOP';
   font-size: 13px;
@@ -441,13 +455,13 @@ footer {
       font-size: 30px;
     }
     .subtitle {
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 20px;
     }
   
     /* Works */
     .works-name {
-      font-size: 10px;
+      font-size: 12px;
     }
   
     .works-list {
@@ -459,7 +473,10 @@ footer {
       margin-right: 0;
       margin-bottom: 30px;
     }
-  
+    .works-img img {
+      height: 100px;
+    }
+
     /* Skill */
     .skill-list {
       display: block;

@@ -3,6 +3,11 @@
   color: rgb(80, 90, 89);
   font-size: 10px;
   font-weight: bold;
+  width: 100%;
+  position: fixed;
+  padding-left: 10px;
+  background-color: #ffff;
+  box-shadow: 0 5px 5px -5px rgba(0,0,0,.1);
 }
 
 .headr-pankuzu a{
@@ -14,13 +19,20 @@
   color: rgb(80, 90, 89);
 }
 
+
+/*
+===========コンテンツ===========
+*/
+.main,
+.text{
+  text-align: center;
+}
+
+
+
 /*
 ======作品１　計算機========
 */
-
-.main-text{
-  text-align: center;
-}
 
 #id1{
   border-bottom: 1px solid #c2c2c2;
@@ -30,9 +42,10 @@
   border-bottom: 1px solid #c2c2c2;
 }
 
-.ans{
-  margin: 20px;
-  text-align: left;
+#id3{
+  border-bottom: 1px solid #c2c2c2;
+  text-align: center;
+  color: rgb(32, 92, 94);
 }
 
 .button{
@@ -43,9 +56,8 @@
   border: 3px solid #c2c2c2;
   background-color: #c2c2c2;
   width: auto;
-  border-radius: 3px;
+  border-radius: 3px
 }
-
 #clear{
   border: 3px solid #c2c2c2;
   background-color: #c2c2c2;
@@ -53,10 +65,146 @@
   width: auto;
   border-radius: 3px;
 }
+
+/*
+======作品２　========
+*/
+#tmp{
+  color: #ffff;
+  background-color: #ffff;
+}
+
+#hatena{
+  width: 50px;
+  text-align: center;
+}
+
+#display{
+  width: 50px;
+  text-align:center;
+}
+
+.dentaku{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hatena{
+  font-weight: bold;
+}
+
+.ans{
+  font-weight: bold;
+}
+
+#sai{
+  border: 3px solid #c2c2c2;
+  background-color: #c2c2c2;
+  width: auto;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+ /* アイコン*/
+ #hint ::before{
+ 
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f0f3';
+  font-size: 25px;
+  color: rgb(60, 80, 68);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+ /* アイコン*/
+
+/*
+======電卓　========
+*/
+
+.box{
+  background-color: bisque;
+}
+
+.display{
+  background-color: bisque;
+}
+
+#E{
+  background-color: coral;
+}
+
+#C{
+  background-color:gold;
+}
+
+table,
+td{
+  border: 2px solid #c2c2c2;
+  border-radius: 5px;
+  border-right: solid 4px #dcdcdca4;
+  border-bottom: solid 4px #dcdcdca4;
+}
+
+td{
+  width: 50px;
+}
+
+td input{
+  width: 100%;
+}
+
+td input:active{
+  background: #9fb5b9;
+}
+
+/*---------------------------toolchip-------------------------------------------*/
+
+.balloonoya {
+  position   : relative;             /* 指定した分だけ相対的に移動 */
+  cursor   : pointer;                /* カーソルをポインターで表示 */
+}
+.balloon1 {
+  display: none;                     /* 要素を非表示 */
+}
+.balloon {
+  position: absolute;                   /* 親要素を基準 */
+  display: inline;                      /* 要素をインラインとして表示 */
+  padding: 2px;                         /* テキストの前後の余白 */
+  background-color: rgba(102, 102, 255, 0.50);       /* 背景色（透明度） */
+  width:180px;                          /* 吹き出し全体の幅 */
+  left : 1%;                           /* 表示位置 */
+  font-size: 80%;                       /* 文字サイズ */
+}
+.balloon:after{
+  border-left: 12px solid rgba(102, 102, 255, 0.50);   /* 吹き出し口の幅・色 */
+  border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
+  border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
+  right: -12px;                           /* 吹き出し口の位置調整 */
+  top: 5%;                                /* 吹き出し口の縦位置 */
+  content: "";                       /* コンテンツの挿入 */
+  position: absolute;                /* 親要素を基準 */
+}
+
+/*---------------------------toolchip-------------------------------------------*/
+
 /*ユーザビリティ*/
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
 
+  .main{
+    padding-top: 60px;
+    text-align: center;
+  }
 
 }
