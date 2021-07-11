@@ -66,25 +66,29 @@
                     <div class="inner">
                         <p class="title">練習２　数当てゲーム　</p>
                             <p class="main-text">
-                                    <p>1～10まで <br class="sp-only">PCの出した「？」の数を当ててください。</p>
-                                     <p>開始ボタン →　数字を選択　→[ E ]を押す。</p>
+                                <p>0～9 まで <br class="sp-only">PCの出した「？」の数を当てるゲームです。</p>
+                                    <p>開始ボタン を押してください。</p>
                                     <br>
 
-                                    <div>
+                                    <div class="balloonoya" onclick="showBalloon()">
                                         <button id="sai" onclick="sai()">開始</button>
+                                        <span class="balloon1" id="makeImg">
+                                            <p class="font-led">準備OK！！</p>
+                                            <p>1.数字を選ぶ<br>2.E 押す</p>
+                                        </span>
                                     </div>
-                                    
+
                                     <div>
                                         <table class="dentaku">
                                             <!--液晶画面-->
                                             <tr>
-                                                <td class="hatena">PC</td>
-                                                <td id="tmp"></td>
-                                                <td class="ans">自分</td>
+                                                <th class="hatena">PC</th>
+                                                <th><span id="counter">3</span> time</th>
+                                                <th class="ans">自分</th>
                                             </tr>
                                             <tr>
                                                 <td><input type="text" id ="hatena" class="box" value="?" disabled/></td>
-                                                <td>=</td>
+                                                <td id="tmp"></td>
                                                 <td><input type="text" class="display" id="display" value=""></td>
                                             </tr>
                                             <tr>
@@ -107,14 +111,11 @@
                                                 <td><input type="button" value="H" id="H" class="hint" onclick="get_calc(this)"></td>
                                                 <td><input type="button" value="E" id="E" onclick="get_calc(this)"></td>
                                             </tr>
+                                            <tr>
+                                                <small><td colspan="3"><div id="msg">　</div></td></small>
+                                            </tr>
                                         </table>
-
-                                        <div class="balloonoya" onclick="showBalloon()">『　[ H ] と [ E ] の説明　』
-                                            <span class="balloon1" id="makeImg">
-                                                H　は　ヒントボタンです。<br>
-                                                E　は　挑戦ボタンです。
-                                            </span>
-                                          </div>
+                                        
                                     </div>
                             </p>
                     </div>

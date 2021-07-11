@@ -35,43 +35,78 @@ function clear_1(){
 
 function sai(){
     //正解の数を作成
-    var correct = Math.floor ( Math.random () * 10 + 1 ) ;
+    var correct = Math.floor ( Math.random () * 10  ) ;
     document.getElementById("tmp").value = correct;
     document.getElementById("hatena").value = "?";
+    document.getElementById("display").value="";
+    document.getElementById("msg").textContent="　";
+    document.getElementById("counter").textContent = 3;
 }
 
 function get_calc(btn){
     var ans = document.getElementById("tmp").value;
+    var ms=" ";
+    var cn = $id("counter")
+    var cp = parseFloat(cn.textContent)
 
-    if(btn.value == "E"){
-        if( document.getElementById("display").value == ans){
-            document.getElementById("hatena").value = ans
-            alert("正解！　 " + ans + "でした");
-
-        }else{
-            alert("残念　Hで　ヒントを見てね");
+        if((btn.value >-1) && (cp > 0) && (ans > -1)){
+            document.getElementById("display").value = btn.value;
+            ms=" .";
         }
 
-    }else if(btn.value == "H" ){
-        if(ans>0){
-            if(ans > 5){
-                alert("5より大きいよ");
-            }else{
-                alert("6より小さいよ");
+        if( ans > -1 ){
+            
+            if(cp <= 0){
+                
+                    ms	=　" 残念! 答えは" + ans + "でした";
+                    document.getElementById("hatena").value = ans;
+                    document.getElementById("tmp").value = -1;
+                    document.getElementById("msg").textContent =cp;
             }
+
+            if(btn.value == "H" ){
+                ms=$H(ans);
+            }
+
+            if(btn.value == "E"){
+                if( document.getElementById("display").value == ans){
+
+                    document.getElementById("hatena").value = ans
+                    document.getElementById("tmp").value = "";
+                    document.getElementById("tmp").value = -1;
+                    ms	="正解!!"; 
+                
+                }else{
+                        cn.textContent = cp -1;
+                        ms	= " 残念! " + $H(ans);
+                }
+            }
+
         }else{
-            alert("開始ボタンを押してね");
+            ms = "開始ボタンを！";
         }
 
-    }else{
-        document.getElementById("display").value = btn.value;
-    }
+        document.getElementById("msg").textContent =ms;
+    
+    
+    
 }
 
 
-function showBalloon(){
+
+function $H(ans){
+    var ms;
+    if(ans > 5){
+        ms = "5より大きいよ";
+    }else{
+        ms = "6より小さいよ";
+    };
+    return ms;
+}
+
+function showBalloon(msg){
     var wObjballoon;
-    wObjballoon	= document.getElementById("makeImg");
+        wObjballoon	= document.getElementById("makeImg");
     if (wObjballoon.className == "balloon1"){
     wObjballoon.className = "balloon";
     }else{
